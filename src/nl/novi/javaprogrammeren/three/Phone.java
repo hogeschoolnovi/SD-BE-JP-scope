@@ -11,9 +11,18 @@ public class Phone {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getInternationalPhoneNumber() {
+    // Wat hieronder gebeurt heet variabele shadowing. Je hebt een variabele met dezelfde naam datatype als een
+    // instantie variabele.
+    // Java overschrijft die waarde dan 'tijdelijk' binnen de methode
+    /*public String getInternationalPhoneNumber() {
         String phoneNumber = "+31";
 
         return phoneNumber;
+    }
+    */
+    public String getInternationalPhoneNumber() {
+        String internationalPrefix = "+31";
+
+        return internationalPrefix + phoneNumber;
     }
 }
